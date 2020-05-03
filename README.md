@@ -21,6 +21,11 @@ For example, you have set up a package mirror in your home network to serve all 
    [main]
    local_mirror_url=http://mirror.local/repos.json
    ```
+   If you are running the [lazy-package-mirror](https://github.com/michel-ludwig/lazy-package-mirror/) on mirror.local, you can use the following settings:
+   ```
+   [main]
+   local_mirror_url=http://mirror.local/repo-data/
+   ```
 7. Run dnf and you should see that your local mirror is detected and used when it is available:
    ```
    Local mirror url: http://mirror.local/repos.json
