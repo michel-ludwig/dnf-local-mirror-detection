@@ -6,11 +6,11 @@ For example, you have set up a package mirror in your home network to serve all 
 
 ## Installation
 
-1. Set up a local mirror of dnf repositories as desired, for example under http://mirror.local/fedora/ and http://mirror.local/fedora/, mirroring the 'fedora' and 'fedora-updates' repositories
+1. Install [lazy-package-mirror](https://github.com/michel-ludwig/lazy-package-mirror), or set up another local mirror of dnf repositories as desired, for example under http://mirror.local/fedora/ and http://mirror.local/fedora/, mirroring the 'fedora' and 'fedora-updates' repositories
 2. Clone this git repository
 3. Copy the file src/local-mirror-detection.py into the appropriate directory, e.g. /usr/lib/python3.7/site-packages/dnf-plugins/local-mirror-detection.py for Fedora 31
 
-4. Create a file 'repos.json' containing a description of your locally mirrored repositories:
+4. If you are not using [lazy-package-mirror](https://github.com/michel-ludwig/lazy-package-mirror), create a file 'repos.json' containing a description of your locally mirrored repositories:
    ```
    {"fedora": {"url": "http://mirror.local/fedora/$releasever/Everything/$basearch/os/"},
     "updates": {"url": "http://mirror.local/updates/$releasever/Everything/$basearch/"}}
